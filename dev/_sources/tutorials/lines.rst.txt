@@ -18,8 +18,8 @@
 .. _sphx_glr_tutorials_lines.py:
 
 
-Plot lines
-==========
+Plotting lines
+==============
 
 Plotting lines is handled by :meth:`pygmt.Figure.plot`.
 
@@ -63,7 +63,7 @@ values to be plotted as a line.
     fig = pygmt.Figure()
     fig.plot(
         region=[0, 10, 0, 10],
-        projection="X25c/20c",
+        projection="X15c/10c",
         frame="a",
         x=[1, 8],
         y=[5, 9],
@@ -103,7 +103,7 @@ and ``y``.
     fig = pygmt.Figure()
     fig.plot(
         region=[0, 10, 0, 10],
-        projection="X25c/20c",
+        projection="X15c/10c",
         frame="a",
         x=[1, 6, 9],
         y=[5, 7, 4],
@@ -144,7 +144,7 @@ not need to be repeated in subsequent uses.
     fig = pygmt.Figure()
     fig.plot(
         region=[0, 10, 0, 10],
-        projection="X25c/20c",
+        projection="X15c/10c",
         frame="a",
         x=[1, 6, 9],
         y=[5, 7, 4],
@@ -191,7 +191,7 @@ default color and ``solid`` as the default style.
     fig = pygmt.Figure()
     fig.plot(
         region=[0, 10, 0, 10],
-        projection="X25c/20c",
+        projection="X15c/10c",
         frame="a",
         x=[1, 8],
         y=[3, 9],
@@ -231,7 +231,7 @@ In the example below, the line color is set to ``red``.
     fig = pygmt.Figure()
     fig.plot(
         region=[0, 10, 0, 10],
-        projection="X25c/20c",
+        projection="X15c/10c",
         frame="a",
         x=[1, 8],
         y=[3, 9],
@@ -272,7 +272,7 @@ The line style can be set and is added after the line width or color to the
     fig = pygmt.Figure()
     fig.plot(
         region=[0, 10, 0, 10],
-        projection="X25c/20c",
+        projection="X15c/10c",
         frame="a",
         x=[1, 8],
         y=[3, 9],
@@ -315,7 +315,7 @@ For a gallery showing other ``pen`` settings, see :doc:`/gallery/lines/linestyle
     fig = pygmt.Figure()
     fig.plot(
         region=[0, 10, 0, 10],
-        projection="X25c/20c",
+        projection="X15c/10c",
         frame="a",
         x=[1, 8],
         y=[3, 9],
@@ -344,7 +344,7 @@ For a gallery showing other ``pen`` settings, see :doc:`/gallery/lines/linestyle
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  11.837 seconds)
+   **Total running time of the script:** ( 0 minutes  6.984 seconds)
 
 
 .. _sphx_glr_download_tutorials_lines.py:

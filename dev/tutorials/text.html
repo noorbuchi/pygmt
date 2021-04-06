@@ -2,12 +2,12 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
     
         <title>Plotting text &mdash; PyGMT</title>
@@ -15,14 +15,29 @@
 
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-rendered-html.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -35,20 +50,10 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-rendered-html.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Creating a map with contour lines" href="contour_map.html" />
-    <link rel="prev" title="Plot lines" href="lines.html" />
+    <link rel="prev" title="Plotting vectors" href="vectors.html" />
     <!-- Google Analytics tracking code -->
     <!-- See https://developers.google.com/analytics/devguides/collection/analyticsjs/ for documentation. -->
     <!-- 'storage': 'none' disables cookies -->
@@ -101,6 +106,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -109,21 +115,22 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <p><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="first_figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gallery/index.html">Gallery</a></li>
 </ul>
-<p class="caption"><span class="caption-text">User Guide</span></p>
+<p><span class="caption-text">User Guide</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="frames.html">Frames, ticks, titles, and labels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projections/index.html">Projections</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coastlines.html">Coastlines and borders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regions.html">Set the region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regions.html">Setting the region</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plot.html">Plotting data points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lines.html">Plot lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lines.html">Plotting lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vectors.html">Plotting vectors</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Plotting text</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#basic-map-annotation">Basic map annotation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#changing-font-style">Changing font style</a></li>
@@ -141,10 +148,11 @@
 <li class="toctree-l1"><a class="reference internal" href="subplots.html">Making subplots</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuring PyGMT defaults</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Reference documentation</span></p>
+<p><span class="caption-text">Reference documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintenance.html">Maintainers Guide</a></li>
 </ul>
 
             
@@ -170,6 +178,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -205,11 +214,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Plotting text</li>
     
@@ -241,7 +252,7 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-tutorials-text-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="plotting-text">
+<section class="sphx-glr-example-title" id="plotting-text">
 <span id="sphx-glr-tutorials-text-py"></span><h1>Plotting text<a class="headerlink" href="#plotting-text" title="Permalink to this headline">¶</a></h1>
 <p>It is often useful to add annotations to a map plot. This is handled by
 <a class="reference internal" href="../api/generated/pygmt.Figure.text.html#pygmt.Figure.text" title="pygmt.Figure.text"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.Figure.text</span></code></a>.</p>
@@ -258,7 +269,7 @@ is the desired name and file extension for the saved figure.</p>
 <span class="kn">import</span> <span class="nn">pygmt</span>
 </pre></div>
 </div>
-<div class="section" id="basic-map-annotation">
+<section id="basic-map-annotation">
 <h2>Basic map annotation<a class="headerlink" href="#basic-map-annotation" title="Permalink to this headline">¶</a></h2>
 <p>Text annotations can be added to a map using the <a class="reference internal" href="../api/generated/pygmt.Figure.text.html#pygmt.Figure.text" title="pygmt.Figure.text"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.Figure.text</span></code></a>
 method of the <a class="reference internal" href="../api/generated/pygmt.Figure.html#pygmt.Figure" title="pygmt.Figure"><code class="xref py py-class docutils literal notranslate"><span class="pre">pygmt.Figure</span></code></a> class.</p>
@@ -285,8 +296,8 @@ accepts either <em>int</em> or <em>float</em> numbers, or a list/array of number
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="changing-font-style">
+</section>
+<section id="changing-font-style">
 <h2>Changing font style<a class="headerlink" href="#changing-font-style" title="Permalink to this headline">¶</a></h2>
 <p>The size, family/weight, and color of an annotation can be specified using
 the <code class="docutils literal notranslate"><span class="pre">font</span></code> parameter.</p>
@@ -309,8 +320,8 @@ including details of how to use non-default fonts.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="plotting-from-a-text-file">
+</section>
+<section id="plotting-from-a-text-file">
 <h2>Plotting from a text file<a class="headerlink" href="#plotting-from-a-text-file" title="Permalink to this headline">¶</a></h2>
 <p>It is also possible to add annotations from a file containing <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code>, and
 <code class="docutils literal notranslate"><span class="pre">text</span></code> fields. Here we give a complete example.</p>
@@ -346,8 +357,8 @@ including details of how to use non-default fonts.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="justify-parameter">
+</section>
+<section id="justify-parameter">
 <h2><code class="docutils literal notranslate"><span class="pre">justify</span></code> parameter<a class="headerlink" href="#justify-parameter" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">justify</span></code> is used to define the anchor point for the bounding box for text
 being added to a plot. The following code segment demonstrates the
@@ -375,8 +386,8 @@ from:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="angle-parameter">
+</section>
+<section id="angle-parameter">
 <h2><code class="docutils literal notranslate"><span class="pre">angle</span></code> parameter<a class="headerlink" href="#angle-parameter" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">angle</span></code> is an optional parameter used to specify the clockwise rotation of
 the text from the horizontal.</p>
@@ -392,8 +403,8 @@ the text from the horizontal.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="fill-parameter">
+</section>
+<section id="fill-parameter">
 <h2><code class="docutils literal notranslate"><span class="pre">fill</span></code> parameter<a class="headerlink" href="#fill-parameter" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">fill</span></code> is used to set the fill color of the area surrounding the text.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../api/generated/pygmt.Figure.html#pygmt.Figure" title="pygmt.Figure" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a> <span class="o">=</span> <a href="../api/generated/pygmt.Figure.html#pygmt.Figure" title="pygmt.Figure" class="sphx-glr-backref-module-pygmt sphx-glr-backref-type-py-class"><span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span></a><span class="p">()</span>
@@ -407,13 +418,13 @@ the text from the horizontal.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="advanced-configuration">
+</section>
+<section id="advanced-configuration">
 <h2>Advanced configuration<a class="headerlink" href="#advanced-configuration" title="Permalink to this headline">¶</a></h2>
 <p>For crafting more advanced styles, be sure to check out the GMT documentation
 at <a class="reference external" href="https://docs.generic-mapping-tools.org/latest/text.html">https://docs.generic-mapping-tools.org/latest/text.html</a> and also the cookbook at
 <a class="reference external" href="https://docs.generic-mapping-tools.org/latest/cookbook/features.html#placement-of-text">https://docs.generic-mapping-tools.org/latest/cookbook/features.html#placement-of-text</a>. Good luck!</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  13.355 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  12.036 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-text-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/53b3891e31a2c7291e7d56b4c1274523/text.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">text.py</span></code></a></p>
@@ -423,8 +434,8 @@ at <a class="reference external" href="https://docs.generic-mapping-tools.org/la
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -432,27 +443,23 @@ at <a class="reference external" href="https://docs.generic-mapping-tools.org/la
           </div>
           
 <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="contour_map.html" class="btn btn-neutral float-right" title="Creating a map with contour lines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="lines.html" class="btn btn-neutral float-left" title="Plot lines" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="contour_map.html" class="btn btn-neutral float-right" title="Creating a map with contour lines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="vectors.html" class="btn btn-neutral float-left" title="Plotting vectors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2021, The PyGMT Developers.
-      
-        <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/8e2b2e6">8e2b2e6</a></code>.
-        </span>
-      
+        &#169; Copyright 2017-2021, The PyGMT Developers.
+      <span class="commit">
+        
+        Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/a4eec49">a4eec49</a></code>.
+      </span>
+      <span class="lastupdated">
+        Last updated on Apr 06, 2021.
+      </span>
 
     </p>
   </div>
@@ -470,7 +477,6 @@ software usage.
 
 
 </footer>
-
         </div>
       </div>
 
@@ -478,7 +484,6 @@ software usage.
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

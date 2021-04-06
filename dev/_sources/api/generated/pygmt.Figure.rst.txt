@@ -72,6 +72,10 @@ pygmt.Figure
     
     
     
+    Figure.rose
+    
+    
+    
     Figure.savefig
     
     
@@ -85,6 +89,10 @@ pygmt.Figure
     
     
     Figure.show
+    
+    
+    
+    Figure.solar
     
     
     

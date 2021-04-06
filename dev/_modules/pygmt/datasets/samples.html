@@ -2,27 +2,41 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
     
-        <title>pygmt.datasets.tutorial &mdash; PyGMT</title>
+        <title>pygmt.datasets.samples &mdash; PyGMT</title>
     
 
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery-rendered-html.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../../../_static/favicon.png"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
@@ -35,16 +49,6 @@
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-rendered-html.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <!-- Google Analytics tracking code -->
@@ -99,6 +103,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -107,21 +112,22 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <p><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">Installing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/first_figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../gallery/index.html">Gallery</a></li>
 </ul>
-<p class="caption"><span class="caption-text">User Guide</span></p>
+<p><span class="caption-text">User Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/frames.html">Frames, ticks, titles, and labels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../projections/index.html">Projections</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/coastlines.html">Coastlines and borders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/regions.html">Set the region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/regions.html">Setting the region</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/plot.html">Plotting data points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/lines.html">Plot lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/lines.html">Plotting lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/vectors.html">Plotting vectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/text.html">Plotting text</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/contour_map.html">Creating a map with contour lines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/earth_relief.html">Plotting Earth relief</a></li>
@@ -130,10 +136,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/subplots.html">Making subplots</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../tutorials/configuration.html">Configuring PyGMT defaults</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Reference documentation</span></p>
+<p><span class="caption-text">Reference documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../maintenance.html">Maintainers Guide</a></li>
 </ul>
 
             
@@ -159,6 +166,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -194,17 +202,19 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../../index.html">Module code</a> &raquo;</li>
         
           <li><a href="../../pygmt.html">pygmt</a> &raquo;</li>
         
-      <li>pygmt.datasets.tutorial</li>
+      <li>pygmt.datasets.samples</li>
     
     
     <li class="source-link">
@@ -219,9 +229,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for pygmt.datasets.tutorial</h1><div class="highlight"><pre>
+  <h1>Source code for pygmt.datasets.samples</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">Functions to load sample data from the GMT tutorials.</span>
+<span class="sd">Functions to load sample data.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">pygmt.src</span> <span class="kn">import</span> <span class="n">which</span>
@@ -229,7 +239,7 @@
 
 <div class="viewcode-block" id="load_japan_quakes"><a class="viewcode-back" href="../../../api/generated/pygmt.datasets.load_japan_quakes.html#pygmt.datasets.load_japan_quakes">[docs]</a><span class="k">def</span> <span class="nf">load_japan_quakes</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Load a table of earthquakes around Japan as a pandas.Dataframe.</span>
+<span class="sd">    Load a table of earthquakes around Japan as a pandas.DataFrame.</span>
 
 <span class="sd">    Data is from the NOAA NGDC database. This is the ``@tut_quakes.ngdc``</span>
 <span class="sd">    dataset used in the GMT tutorials.</span>
@@ -240,7 +250,7 @@
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    data :  pandas.Dataframe</span>
+<span class="sd">    data : pandas.DataFrame</span>
 <span class="sd">        The data table. Columns are year, month, day, latitude, longitude,</span>
 <span class="sd">        depth (in km), and magnitude of the earthquakes.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -271,7 +281,7 @@
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    data :  pandas.Dataframe</span>
+<span class="sd">    data : pandas.DataFrame</span>
 <span class="sd">        The data table. Columns are longitude and latitude.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">fname</span> <span class="o">=</span> <span class="n">which</span><span class="p">(</span><span class="s2">&quot;@ridge.txt&quot;</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
@@ -294,7 +304,7 @@
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    data :  pandas.Dataframe</span>
+<span class="sd">    data : pandas.DataFrame</span>
 <span class="sd">        The data table. Columns are longitude, latitude, and bathymetry.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">fname</span> <span class="o">=</span> <span class="n">which</span><span class="p">(</span><span class="s2">&quot;@tut_ship.xyz&quot;</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
@@ -306,7 +316,7 @@
 
 <div class="viewcode-block" id="load_usgs_quakes"><a class="viewcode-back" href="../../../api/generated/pygmt.datasets.load_usgs_quakes.html#pygmt.datasets.load_usgs_quakes">[docs]</a><span class="k">def</span> <span class="nf">load_usgs_quakes</span><span class="p">():</span>
     <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Load a table of global earthquakes form the USGS as a pandas.Dataframe.</span>
+<span class="sd">    Load a table of global earthquakes form the USGS as a pandas.DataFrame.</span>
 
 <span class="sd">    This is the ``@usgs_quakes_22.txt`` dataset used in the GMT tutorials.</span>
 
@@ -316,13 +326,35 @@
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
-<span class="sd">    data : pandas.Dataframe</span>
+<span class="sd">    data : pandas.DataFrame</span>
 <span class="sd">        The data table. Use ``print(data.describe())`` to see the available</span>
 <span class="sd">        columns.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">fname</span> <span class="o">=</span> <span class="n">which</span><span class="p">(</span><span class="s2">&quot;@usgs_quakes_22.txt&quot;</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="load_fractures_compilation"><a class="viewcode-back" href="../../../api/generated/pygmt.datasets.load_fractures_compilation.html#pygmt.datasets.load_fractures_compilation">[docs]</a><span class="k">def</span> <span class="nf">load_fractures_compilation</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Load a table of fracture lengths and azimuths as hypothetically digitized</span>
+<span class="sd">    from geological maps as a pandas.DataFrame.</span>
+
+<span class="sd">    This is the ``@fractures_06.txt`` dataset used in the GMT tutorials.</span>
+
+<span class="sd">    The data are downloaded to a cache directory (usually ``~/.gmt/cache``) the</span>
+<span class="sd">    first time you invoke this function. Afterwards, it will load the data from</span>
+<span class="sd">    the cache. So you&#39;ll need an internet connection the first time around.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    data : pandas.DataFrame</span>
+<span class="sd">        The data table. Use ``print(data.describe())`` to see the available</span>
+<span class="sd">        columns.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="n">which</span><span class="p">(</span><span class="s2">&quot;@fractures_06.txt&quot;</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;\s+&quot;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;azimuth&quot;</span><span class="p">,</span> <span class="s2">&quot;length&quot;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">data</span><span class="p">[[</span><span class="s2">&quot;length&quot;</span><span class="p">,</span> <span class="s2">&quot;azimuth&quot;</span><span class="p">]]</span></div>
 </pre></div>
 
            </div>
@@ -330,18 +362,19 @@
           </div>
           
 <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2021, The PyGMT Developers.
-      
-        <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/8e2b2e6">8e2b2e6</a></code>.
-        </span>
-      
+        &#169; Copyright 2017-2021, The PyGMT Developers.
+      <span class="commit">
+        
+        Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/a4eec49">a4eec49</a></code>.
+      </span>
+      <span class="lastupdated">
+        Last updated on Apr 06, 2021.
+      </span>
 
     </p>
   </div>
@@ -359,7 +392,6 @@ software usage.
 
 
 </footer>
-
         </div>
       </div>
 
@@ -367,7 +399,6 @@ software usage.
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

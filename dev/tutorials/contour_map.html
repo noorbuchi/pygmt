@@ -2,12 +2,12 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
     
         <title>Creating a map with contour lines &mdash; PyGMT</title>
@@ -15,14 +15,29 @@
 
 
   
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-rendered-html.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -35,16 +50,6 @@
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-rendered-html.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Plotting Earth relief" href="earth_relief.html" />
@@ -101,6 +106,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -109,21 +115,22 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <p><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="first_figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../gallery/index.html">Gallery</a></li>
 </ul>
-<p class="caption"><span class="caption-text">User Guide</span></p>
+<p><span class="caption-text">User Guide</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="frames.html">Frames, ticks, titles, and labels</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../projections/index.html">Projections</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coastlines.html">Coastlines and borders</a></li>
-<li class="toctree-l1"><a class="reference internal" href="regions.html">Set the region</a></li>
+<li class="toctree-l1"><a class="reference internal" href="regions.html">Setting the region</a></li>
 <li class="toctree-l1"><a class="reference internal" href="plot.html">Plotting data points</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lines.html">Plot lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lines.html">Plotting lines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vectors.html">Plotting vectors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="text.html">Plotting text</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Creating a map with contour lines</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#create-contour-plot">Create contour plot</a></li>
@@ -139,10 +146,11 @@
 <li class="toctree-l1"><a class="reference internal" href="subplots.html">Making subplots</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuring PyGMT defaults</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Reference documentation</span></p>
+<p><span class="caption-text">Reference documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../maintenance.html">Maintainers Guide</a></li>
 </ul>
 
             
@@ -168,6 +176,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -203,11 +212,13 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Creating a map with contour lines</li>
     
@@ -239,7 +250,7 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-tutorials-contour-map-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="creating-a-map-with-contour-lines">
+<section class="sphx-glr-example-title" id="creating-a-map-with-contour-lines">
 <span id="sphx-glr-tutorials-contour-map-py"></span><h1>Creating a map with contour lines<a class="headerlink" href="#creating-a-map-with-contour-lines" title="Permalink to this headline">¶</a></h1>
 <p>Plotting a contour map is handled by <a class="reference internal" href="../api/generated/pygmt.Figure.grdcontour.html#pygmt.Figure.grdcontour" title="pygmt.Figure.grdcontour"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.Figure.grdcontour</span></code></a>.</p>
 <div class="admonition note">
@@ -256,7 +267,7 @@ is the desired name and file extension for the saved figure.</p>
 <a href="https://xarray.pydata.org/en/stable/generated/xarray.DataArray.html#xarray.DataArray" title="xarray.DataArray" class="sphx-glr-backref-module-xarray sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">grid</span></a> <span class="o">=</span> <a href="../api/generated/pygmt.datasets.load_earth_relief.html#pygmt.datasets.load_earth_relief" title="pygmt.datasets.load_earth_relief" class="sphx-glr-backref-module-pygmt-datasets sphx-glr-backref-type-py-function"><span class="n">pygmt</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_earth_relief</span></a><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="s2">&quot;05m&quot;</span><span class="p">,</span> <span class="n">region</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">92.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">82.5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">])</span>
 </pre></div>
 </div>
-<div class="section" id="create-contour-plot">
+<section id="create-contour-plot">
 <h2>Create contour plot<a class="headerlink" href="#create-contour-plot" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="../api/generated/pygmt.Figure.grdcontour.html#pygmt.Figure.grdcontour" title="pygmt.Figure.grdcontour"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.Figure.grdcontour</span></code></a> method takes the grid input.
 It plots annotated contour lines, which are thicker and have the
@@ -275,8 +286,8 @@ equidistant cylindrical projection and with no frame.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="contour-line-settings">
+</section>
+<section id="contour-line-settings">
 <h2>Contour line settings<a class="headerlink" href="#contour-line-settings" title="Permalink to this headline">¶</a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">annotation</span></code> and <code class="docutils literal notranslate"><span class="pre">interval</span></code> arguments to adjust contour line intervals.
 In the example below, there are contour intervals every 250 meters and
@@ -295,8 +306,8 @@ annotated contour lines every 1,000 meters.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="contour-limits">
+</section>
+<section id="contour-limits">
 <h2>Contour limits<a class="headerlink" href="#contour-limits" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">limit</span></code> argument sets the minimum and maximum values for the contour lines.
 The argument takes the low and high values,
@@ -316,8 +327,8 @@ and is either a list (as below) or a string <code class="docutils literal notran
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="map-settings">
+</section>
+<section id="map-settings">
 <h2>Map settings<a class="headerlink" href="#map-settings" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="../api/generated/pygmt.Figure.grdcontour.html#pygmt.Figure.grdcontour" title="pygmt.Figure.grdcontour"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.Figure.grdcontour</span></code></a> method accepts additional arguments,
 including setting the projection and frame.</p>
@@ -338,8 +349,8 @@ including setting the projection and frame.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-</div>
-<div class="section" id="adding-a-colormap">
+</section>
+<section id="adding-a-colormap">
 <h2>Adding a colormap<a class="headerlink" href="#adding-a-colormap" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="../api/generated/pygmt.Figure.grdimage.html#pygmt.Figure.grdimage" title="pygmt.Figure.grdimage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.Figure.grdimage</span></code></a> method can be used to add a
 colormap to the contour map. It must be called prior to
@@ -367,7 +378,7 @@ method, it does not need to be repeated in the <a class="reference internal" hre
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;IPython.core.display.Image object&gt;
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.180 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.883 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-tutorials-contour-map-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/544acea70c00d695dad591c14a2cb900/contour_map.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">contour_map.py</span></code></a></p>
@@ -377,8 +388,8 @@ method, it does not need to be repeated in the <a class="reference internal" hre
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -386,27 +397,23 @@ method, it does not need to be repeated in the <a class="reference internal" hre
           </div>
           
 <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="earth_relief.html" class="btn btn-neutral float-right" title="Plotting Earth relief" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="text.html" class="btn btn-neutral float-left" title="Plotting text" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="earth_relief.html" class="btn btn-neutral float-right" title="Plotting Earth relief" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="text.html" class="btn btn-neutral float-left" title="Plotting text" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2021, The PyGMT Developers.
-      
-        <span class="commit">
-          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/8e2b2e6">8e2b2e6</a></code>.
-        </span>
-      
+        &#169; Copyright 2017-2021, The PyGMT Developers.
+      <span class="commit">
+        
+        Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/a4eec49">a4eec49</a></code>.
+      </span>
+      <span class="lastupdated">
+        Last updated on Apr 06, 2021.
+      </span>
 
     </p>
   </div>
@@ -424,7 +431,6 @@ software usage.
 
 
 </footer>
-
         </div>
       </div>
 
@@ -432,7 +438,6 @@ software usage.
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -523,6 +523,39 @@ Base maps
 
 
 
+.. _sphx_glr_gallery_histograms:
+
+Histograms
+----------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="The pygmt.Figure.rose method can plot windrose diagrams or polar histograms.">
+
+.. only:: html
+
+ .. figure:: /gallery/histograms/images/thumb/sphx_glr_rose_thumb.png
+     :alt: Rose diagram
+
+     :ref:`sphx_glr_gallery_histograms_rose.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/histograms/rose
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
 .. _sphx_glr_gallery_embellishments:
 
 Plot embellishments
@@ -550,6 +583,27 @@ Plot embellishments
    :hidden:
 
    /gallery/embellishments/colorbar
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Use pygmt.Figure.solar to show the different transition stages between daytime and nightime. Th...">
+
+.. only:: html
+
+ .. figure:: /gallery/embellishments/images/thumb/sphx_glr_solar_thumb.png
+     :alt: Day-night terminator line and twilights
+
+     :ref:`sphx_glr_gallery_embellishments_solar.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /gallery/embellishments/solar
 
 .. raw:: html
 
